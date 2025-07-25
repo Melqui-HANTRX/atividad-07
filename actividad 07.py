@@ -124,8 +124,9 @@ def menu():
                 mayor, menor, repes = mayorOmenorYrepetidos()
                 print(f"Mayor: {mayor}, Menor: {menor}")
                 print("Repetidos y frecuencia:")
-                for clave in repes:
-                    print(f"{clave} → {repes[clave]} veces")
+                for numerosrep in repes:
+                    print(f"{numerosrep} → {repes[numerosrep]} veces")
+                return mayor, menor, repes
             case "6":
                 resultado = calculadora()
                 print(f"Resultado: {resultado}")
