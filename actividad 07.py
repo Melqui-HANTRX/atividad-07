@@ -63,3 +63,35 @@ def mayorOmenorYrepetidos():
             repetidos[rep2] = frecuenciarepetidas[rep2]
 
     return mayor, menor, repetidos
+
+def calculadora():
+    num1 = float(input("Ingrese el primer número: "))
+    num2 = float(input("Ingrese el segundo número: "))
+    print("Operaciones disponibles: +  -  *  /")
+    operaciones = input("Seleccione la operación: ")
+
+    if operaciones == "+":
+        return num1 + num2
+    elif operaciones == "-":
+        return num1 - num2
+    elif operaciones == "*":
+        return num1 * num2
+    elif operaciones == "/":
+        if num2 == 0:
+            return "Error: división por cero"
+        return num1 / num2
+    else:
+        return "Operación inválida"
+
+def menu():
+    while True:
+        print("\n--- MENÚ ---")
+        print("1. Analizar lista de números reales")
+        print("2. Calcular área y perímetro de un rectángulo")
+        print("3. Verificar si un número es primo")
+        print("4. Promedio de calificaciones y análisis")
+        print("5. Análisis de lista de números enteros")
+        print("6. Calculadora básica")
+        print("7. Salir")
+
+        opcion = input("Seleccione una opción (1-7): ")
