@@ -95,3 +95,44 @@ def menu():
         print("7. Salir")
 
         opcion = input("Seleccione una opción (1-7): ")
+        match opcion:
+            case "1":
+                numeros = ingresar_numeros()
+                suma, prom, pos, neg, ceros, mult3 = analizarLalista(numeros)
+                print(f"Suma total: {suma}")
+                print(f"Promedio: {prom:.2f}")
+                print(f"Positivos: {pos}, Negativos: {neg}, Ceros: {ceros}")
+                print(f"Multiplos de 3: {mult3}")
+            case "2":
+                base = float(input("Ingrese la base del rectángulo: "))
+                altura = float(input("Ingrese la altura del rectángulo: "))
+                area = areaDerectangulo(base, altura)
+                perimetro = perimetroDelrectangulo(base, altura)
+                print(f"Área: {area}")
+                print(f"Perímetro: {perimetro}")
+            case "3":
+                num = int(input("Ingrese un número entero: "))
+                if esunNumeroprimo(num):
+                    print("El número es primo.")
+                else:
+                    print("El número NO es primo.")
+            case "4":
+                promedio, buenos, riesgo = promedioDelascalificaciones()
+                print(f"Promedio: {promedio:.2f}")
+                print(f"Mayor o igual a ≥85: {buenos}, Es menor o igual que (<60): {riesgo}")
+            case "5":
+                mayor, menor, repes = mayorOmenorYrepetidos()
+                print(f"Mayor: {mayor}, Menor: {menor}")
+                print("Repetidos y frecuencia:")
+                for clave in repes:
+                    print(f"{clave} → {repes[clave]} veces")
+            case "6":
+                resultado = calculadora()
+                print(f"Resultado: {resultado}")
+            case "7":
+                print("Saliendo del programa. ¡Hasta luego!")
+                break
+            case _:
+                print("Opción inválida. Intente nuevamente.")
+menu()
+
